@@ -127,11 +127,10 @@ private function Async_Exec()
 {
 	$active = null;
 	// Exécute le gestionnaire
-do {
-    $this->async = curl_multi_exec($this->mch, $active);
-    curl_multi_select($this->mch);
-} while ($active > 0);
-	
+	do {
+    		$this->async = curl_multi_exec($this->mch, $active);
+    		curl_multi_select($this->mch);
+	} while ($active > 0);
 }	
 
 /*
